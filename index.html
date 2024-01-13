@@ -39,7 +39,8 @@
       </div>
 
       <div class="txt">
-        <button class="btn-s" id="hoverButton" type="submit" onclick="sPlay()" onmouseover="sPlay()" onmouseout="sStop()">Learning</button>
+        <button class="btn-s" id="hoverButton" type="submit" onmouseover="sPlay()"
+          onmouseout="sStop()">Learning</button>
         <div class="pub">Published 21 Dec 2023</div>
         <h1 class="hed">HTML & CSS Foundations</h1>
         <div class="tt">
@@ -67,12 +68,12 @@
 
     let currentPlaybackTime = 0;
 
-    function sPlay(){
+    function sPlay() {
       audio.currentTime = currentPlaybackTime;
       audio.play();
     }
 
-    function sStop(){
+    function sStop() {
       currentPlaybackTime = audio.currentTime;
       audio.pause();
     }
