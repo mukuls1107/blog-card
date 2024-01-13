@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      background-color: black;
+      font-size: 11px;
+      text-align: center;
+      color: white;
+    }
+
+    .attribution a {
+      color: hsl(0, 0%, 100%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <audio src="./assets/chip.mp3" id="hoverSound"></audio>
+  <div class="container">
+
+
+    <div class="blog-box">
+      <div class="i">
+
+        <img src="./assets/images/illustration-article.svg" alt="" srcset="" class="img">
+      </div>
+
+      <div class="txt">
+        <button class="btn-s" id="hoverButton" type="submit" onclick="sPlay()" onmouseover="sPlay()" onmouseout="sStop()">Learning</button>
+        <div class="pub">Published 21 Dec 2023</div>
+        <h1 class="hed">HTML & CSS Foundations</h1>
+        <div class="tt">
+
+          <p>These languages are the backbone of every website, defining structure,
+            content, and presentation.</p>
+        </div>
+
+        <div class="foot">
+          <img src="./assets/images/image-avatar.webp" alt="">
+          <p class="ftxt">Greg Hooper</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/clayEnkidu">Mukul Singh</a>.
+  </div>
+
+  <script>
+    const button = document.getElementById('hoverButton');
+    const audio = document.getElementById('hoverSound');
+
+    let currentPlaybackTime = 0;
+
+    function sPlay(){
+      audio.currentTime = currentPlaybackTime;
+      audio.play();
+    }
+
+    function sStop(){
+      currentPlaybackTime = audio.currentTime;
+      audio.pause();
+    }
+    // button.addEventListener('mouseover', () => {
+    //   audio.currentTime = currentPlaybackTime;
+    //   audio.play();
+    // });
+
+    // button.addEventListener('mouseout', () => {
+    //   currentPlaybackTime = audio.currentTime;
+    //   audio.pause();
+    // });
+  </script>
+</body>
+
+</html>
