@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Check Here](screenshot/page-preview.jpeg "Live Preview")
+![Check Here](./screenshot/ss.png "Live Preview")
 
 
 ### Links
